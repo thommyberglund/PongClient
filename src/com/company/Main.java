@@ -14,7 +14,8 @@ public class Main {
                 Terminal terminal = TerminalFacade.createTerminal(System.in,
                         System.out, Charset.forName("UTF8"));
                 terminal.enterPrivateMode();
-                String serverName = "192.168.25.147";
+                String serverName = "192.168.25.158";
+                //String serverName = "localhost";
                 int port = 5000;
                 try {
                     System.out.println("Connecting to " + serverName + " on port " + port);
@@ -46,12 +47,12 @@ public class Main {
                             case ArrowDown:
                                 System.out.println("Sending 1");
                                 arrowDown(terminal);
-                                //ch.send("1");
+                                ch.send("1");
                                 break;
                             case ArrowUp:
                                 System.out.println("Sending 2");
                                 arrowUp(terminal);
-                                //ch.send("2");
+                                ch.send("2");
                                 break;
 
                         }
